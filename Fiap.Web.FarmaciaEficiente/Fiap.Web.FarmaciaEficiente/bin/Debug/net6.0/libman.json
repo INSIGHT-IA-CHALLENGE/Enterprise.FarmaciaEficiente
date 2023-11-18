@@ -5,6 +5,11 @@
     {
       "library": "bootstrap-icons@1.11.1",
       "destination": "wwwroot/lib/bootstrap-icons/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "@syncfusion/ej2@23.1.44",
+      "destination": "wwwroot/lib/syncfusion/ej2/"
     }
   ]
 }
