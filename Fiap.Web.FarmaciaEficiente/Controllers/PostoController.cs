@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Fiap.Web.FarmaciaEficiente.Controllers
 {
+    [Authorize]
+    [TypeFilter(typeof(FiltroAuthorization))]
     [Route("dashboard/posto")]
-    [TypeFilter(typeof(VerificarUsuarioFiltrar))]
     public class PostoController : Controller
 	{
 
