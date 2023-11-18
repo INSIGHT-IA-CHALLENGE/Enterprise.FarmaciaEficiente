@@ -7,7 +7,7 @@ Entrega:
 
 ## Objetivos: Criar uma aplicação ASP.NET Core que resolva um problema do tema proposto na Global Solution.
 
-╸ Instruções: A aplicação deve ser desenvolvida com ASP.NET MVC utilizando um banco de dados
+- Instruções: A aplicação deve ser desenvolvida com ASP.NET MVC utilizando um banco de dados
   SQL Server, MySql ou Oracle.
 
 ╸ Requisitos:
