@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EQ7KxHahGTrLSdRsoTtnAPM4CkrCQQfz4q1iOzcg7O8N5D1BAd435BXRtzBInlj7oF6ztTj9bj5pL4bcj9lB3w==",
+  "dgSpecHash": "eriJ17QikrpuJ7TI100a8oFQepI0CSXgwAt4hKeu6EgjhCMOBXrCqLILkvxuk/Qz5xOPYDNDWaL5Mgtvold3eQ==",
   "success": true,
-  "projectFilePath": "D:\\Globa Solution - FINAL\\ENTERPRISE APPLICATION DEVELOPMENT\\Fiap.Web.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente.csproj",
+  "projectFilePath": "D:\\Globa Solution - FINAL\\Enterprise.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luans\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Luans\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
