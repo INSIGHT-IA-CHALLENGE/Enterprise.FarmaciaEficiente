@@ -39,6 +39,6 @@ namespace Fiap.Web.FarmaciaEficiente.Models
         public StatusEnum Status { get; set; } = StatusEnum.ATIVO;
 
         [Required(ErrorMessage = "Tipo de Usuário é obrigatório")]
-        public TipoUsuarioEnum TipoUsuario { get; set; }
+        public TipoUsuarioEnum TipoUsuario { get; set; } = TipoUsuarioEnum.PACIENTE;
     }
 }

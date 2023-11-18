@@ -11113,11 +11113,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Globa Solution - FINAL\\Enterprise\\Fiap.Web.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente.csproj",
+      "projectUniqueName": "D:\\Globa Solution - FINAL\\ENTERPRISE APPLICATION DEVELOPMENT\\Fiap.Web.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente.csproj",
       "projectName": "Fiap.Web.FarmaciaEficiente",
-      "projectPath": "D:\\Globa Solution - FINAL\\Enterprise\\Fiap.Web.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente.csproj",
+      "projectPath": "D:\\Globa Solution - FINAL\\ENTERPRISE APPLICATION DEVELOPMENT\\Fiap.Web.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente.csproj",
       "packagesPath": "C:\\Users\\Luans\\.nuget\\packages\\",
-      "outputPath": "D:\\Globa Solution - FINAL\\Enterprise\\Fiap.Web.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente\\obj\\",
+      "outputPath": "D:\\Globa Solution - FINAL\\ENTERPRISE APPLICATION DEVELOPMENT\\Fiap.Web.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Luans\\AppData\\Roaming\\NuGet\\NuGet.Config",

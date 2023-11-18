@@ -14,7 +14,6 @@ namespace Fiap.Web.FarmaciaEficiente.Persistencia
         public DbSet<Retirada> Retiradas { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Retirada>()
@@ -22,7 +21,6 @@ namespace Fiap.Web.FarmaciaEficiente.Persistencia
                 .WithMany()
                 .HasForeignKey(r => r.UsuarioId)
                 .OnDelete(DeleteBehavior.Restrict);
-
         }
     }
 }

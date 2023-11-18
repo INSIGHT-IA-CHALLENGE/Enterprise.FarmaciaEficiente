@@ -1,0 +1,94 @@
+﻿@model Fiap.Web.FarmaciaEficiente.Models.Usuario
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="~/assets/img/favicon.png" rel="icon">
+    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link href="~/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+    <link href="~/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+
+            <h1 class="logo me-auto"><a asp-controller="home" asp-action="index">Farmacia Eficiente</a></h1>
+
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto active" asp-controller="account" asp-action="login">Entrar</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+
+
+            <a asp-controller="account" asp-action="register" class="appointment-btn scrollto"><span class="d-none d-md-inline">Registrar</span></a>
+
+        </div>
+    </header>
+    <section class="h-100 gradient-form">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+
+                                    @if (TempData["error"] != null)
+                                    {
+                                        <div class="alert alert-danger">
+                                            @TempData["error"]
+                                        </div>
+                                    }
+
+                                    <form asp-action="login">
+
+                                        <partial name="_FormLogin" />
+                                        <div class="form-outline mb-4">
+                                            <button class="btn btn-primary form-control">Entrar</button>
+                                        </div>
+
+                                    </form>
+
+
+
+                                    <div class="d-flex star align-items-center pb-4">
+                                        <p class="mb-0 me-2">Ainda nao possui uma conta?</p>
+                                        <a asp-action="register" type="button" class="btn btn-outline-danger">Crie sua conta!</a>
+                                    </div>
+                                 
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                                <div class="text-center mx-5">
+                                    <img src="~/assets/img/Pharmacist-bro.png" style="width: 350px;" alt="logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
