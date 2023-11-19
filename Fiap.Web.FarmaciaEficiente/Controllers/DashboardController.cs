@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
+
 [Authorize]
 [TypeFilter(typeof(FiltroAuthorization))]
 public class DashboardController : Controller
@@ -20,7 +21,6 @@ public class DashboardController : Controller
     public IActionResult Index()
     {
 
-        
         return RedirectToAction("index", "posto");
     }
 }

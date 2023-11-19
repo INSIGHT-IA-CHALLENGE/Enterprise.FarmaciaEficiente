@@ -589,10 +589,6 @@
       "PackagePath": "staticwebassets\\assets\\vendor\\swiper\\swiper-bundle.min.js.map"
     },
     {
-      "Id": "D:\\Globa Solution - FINAL\\Enterprise.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente\\wwwroot\\css\\bootstrapTheme.css",
-      "PackagePath": "staticwebassets\\css\\bootstrapTheme.css"
-    },
-    {
       "Id": "D:\\Globa Solution - FINAL\\Enterprise.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -639,6 +635,10 @@
     {
       "Id": "D:\\Globa Solution - FINAL\\Enterprise.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente\\wwwroot\\dashboard\\css\\bootstrap\\utilities\\_stretched-link.css",
       "PackagePath": "staticwebassets\\dashboard\\css\\bootstrap\\utilities\\_stretched-link.css"
+    },
+    {
+      "Id": "D:\\Globa Solution - FINAL\\Enterprise.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente\\wwwroot\\dashboard\\css\\style-posto.css",
+      "PackagePath": "staticwebassets\\dashboard\\css\\style-posto.css"
     },
     {
       "Id": "D:\\Globa Solution - FINAL\\Enterprise.FarmaciaEficiente\\Fiap.Web.FarmaciaEficiente\\wwwroot\\dashboard\\css\\style.css",

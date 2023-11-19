@@ -1,8 +1,6 @@
 ﻿using System.Security.Claims;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.AspNetCore.Routing;
 using Fiap.Web.FarmaciaEficiente.Persistencia;
 
 public class FiltroAuthorization : IAsyncActionFilter

@@ -13,15 +13,15 @@ namespace Fiap.Web.FarmaciaEficiente.Models
 
         /*"OneToOne"*/
         [Required(ErrorMessage = "Endereco é obrigatório")]
-        public Endereco Endereco { get; set; }
+        public Endereco? Endereco { get; set; }
 
         [StringLength(50, MinimumLength = 1, ErrorMessage = "O nome do posto de saúde deve ter entre 1 e 50 caracteres")]
         [Required(ErrorMessage = "Nome é obrigatório")]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
         [StringLength(50, MinimumLength = 1, ErrorMessage = "A descrição do posto de saúde deve ter entre 1 e 50 caracteres")]
         [Required(ErrorMessage = "Descrição é obrigatória")]
-        public string Descricao { get; set; }
+        public string? Descricao { get; set; }
 
         [Required(ErrorMessage = "Status é obrigatório")]
         [EnumDataType(typeof(StatusEnum))]
