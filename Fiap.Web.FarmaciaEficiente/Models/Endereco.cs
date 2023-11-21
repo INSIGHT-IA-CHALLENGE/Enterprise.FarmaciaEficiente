@@ -35,7 +35,8 @@ namespace Fiap.Web.FarmaciaEficiente.Models
         [Required(ErrorMessage = "Número é obrigatório")]
         public string? Numero { get; set; }
 
-        public string Complemento { get; set; }
+        
+        public string? Complemento { get; set; } = "Sem complemento";
 
         [Required(ErrorMessage = "Status é obrigatório")]
         public StatusEnum Status { get; set; } = StatusEnum.ATIVO;

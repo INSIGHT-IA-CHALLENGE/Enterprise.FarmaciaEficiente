@@ -1,0 +1,113 @@
+﻿@model Posto
+
+
+<style>
+    .nav-pills .nav-link.active {
+        background-color: #6e5aa3;
+        color: #fff;
+    }
+
+    .nav-pills .nav-link:not(.active) {
+        background-color: #f0f0f0;
+        color: #000;
+    }
+</style>
+
+<div class="card-body">
+    <div class="mb-4 row">
+        <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
+            <li class="nav-item mx-2" role="presentation">
+                <a class="nav-link active" id="pills-infos-tab" data-bs-toggle="pill" href="#pills-infos" role="tab" aria-controls="pills-infos" aria-selected="true">Informações</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link mx-2" id="pills-adress-tab" data-bs-toggle="pill" href="#pills-adress" role="tab" aria-controls="pills-adress" aria-selected="false">Endereço</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-infos" role="tabpanel" aria-labelledby="pills-infos-tab">
+
+
+            <div class="form-outline mb-4">
+                <label asp-for="Nome">Nome</label>
+                <input required asp-for="Nome" class="form-control" placeholder="Posto Aclimação" />
+            </div>
+
+            <div class="form-outline mb-4">
+                <label asp-for="Descricao">Descrição</label>
+                <input max="50" min="1" required asp-for="Descricao" class="form-control" placeholder="Posto da fiap" />
+            </div>
+
+
+
+        </div>
+
+        <div class="tab-pane fade" id="pills-adress" role="tabpanel" aria-labelledby="pills-adress-tab">
+
+
+            <div class="row">
+                <div class="form-outline mb-4 col-4">
+                    <label asp-for="Endereco.Cep">CEP</label>
+                    <input required asp-for="Endereco.Cep" class="form-control" placeholder="041040-222" />
+                </div>
+
+
+                <div class="form-outline mb-4 col-8">
+                    <label asp-for="Endereco.Logradouro">Logradouro</label>
+                    <input required asp-for="Endereco.Logradouro" class="form-control" placeholder="Av Lins vasconcelos" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-outline mb-4 col-6">
+                    <label asp-for="Endereco.Numero">Numero</label>
+                    <input required asp-for="Endereco.Numero" class="form-control" placeholder="1222A" />
+                </div>
+
+                <div class="form-outline mb-4 col-6">
+                    <label asp-for="Endereco.Bairro">Bairro</label>
+                    <input required asp-for="Endereco.Bairro" class="form-control" placeholder="Cambuci" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-outline mb-4 col-8">
+                    <label asp-for="Endereco.Cidade">Cidade</label>
+                    <input required asp-for="Endereco.Cidade" class="form-control" placeholder="São paulo" />
+                </div>
+
+                <div class="form-outline mb-4 col-4">
+                    <label asp-for="Endereco.Uf">UF</label>
+                    <input required asp-for="Endereco.Uf" class="form-control" placeholder="SP" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-outline col-12 mb-4">
+                    <label asp-for="Endereco.Complemento">Complemento</label>
+                    <input asp-for="Endereco.Complemento" class="form-control" placeholder="Prédio 2 - sala 3" />
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+        function nextStep(tabId) {
+            var tab = document.getElementById(tabId);
+            var pillsTab = new bootstrap.Tab(document.getElementById('pills-tab'));
+            pillsTab.show(tab);
+        }
+
+        function previousStep(tabId) {
+            var tab = document.getElementById(tabId);
+            var pillsTab = new bootstrap.Tab(document.getElementById('pills-tab'));
+            pillsTab.show(tab);
+        }
+    </script>
+}

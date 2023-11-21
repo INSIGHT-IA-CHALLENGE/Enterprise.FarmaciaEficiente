@@ -12,6 +12,7 @@ namespace Fiap.Web.FarmaciaEficiente.ViewModels
         public Endereco? Endereco { get; set; }
         public List<MedicamentoViewModel>? Medicamentos { get; set; }
         public int QuantidadeMedicamentos { get; set; }
+
     }
 
 

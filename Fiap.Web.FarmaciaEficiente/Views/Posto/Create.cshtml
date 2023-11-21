@@ -1,0 +1,26 @@
+﻿@model Posto
+
+@{
+    Layout = "_Dashboard";
+    ViewData["Title"] = "Postos Cadastro";
+}
+
+
+
+
+<form asp-action="create">
+
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <partial name="_Form" />
+            <div class="row px-3">
+                <div class="form-outline ml-3  mb-4" id="createAccountButton">
+                    <button type="submit" class="btn btn-primary form-control">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+  
+
+</form>

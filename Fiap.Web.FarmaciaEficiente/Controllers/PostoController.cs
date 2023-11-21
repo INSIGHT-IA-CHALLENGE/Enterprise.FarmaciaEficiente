@@ -28,6 +28,7 @@ namespace Fiap.Web.FarmaciaEficiente.Controllers
             return HttpContext.Items["Usuario"] as Usuario;
         }
 
+        [HttpGet]
         public IActionResult Index(string filter = "posto", string query = "")
         {
 
@@ -74,6 +75,27 @@ namespace Fiap.Web.FarmaciaEficiente.Controllers
             }
 
             return View(postosViewModel);
+        }
+
+        [HttpGet]
+        [Route("create")]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        [Route("create")]
+        public IActionResult Create(Posto model)
+        {
+
+            _context.Postos.Add(model);
+            _context.SaveChanges();
+
+            TempData["msg"] = "Posto cadastrado!";
+            TempData["color"] = "success";
+            return RedirectToAction("index");
         }
 
     }

@@ -10,12 +10,12 @@ namespace Fiap.Web.FarmaciaEficiente.Controllers
 {
     public class AccountController : Controller
     {
- 
+
         private readonly FarmaciaContext _context;
 
         public AccountController(FarmaciaContext context)
         {
-      
+
             _context = context;
         }
 
@@ -42,7 +42,6 @@ namespace Fiap.Web.FarmaciaEficiente.Controllers
                 var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.UsuarioId.ToString()),
-                // Adicione outras claims conforme necessário
             };
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -58,8 +57,9 @@ namespace Fiap.Web.FarmaciaEficiente.Controllers
 
                 return RedirectToAction("Index", "Dashboard");
             }
+            TempData["msg"] = "Email ou senha incorretos!";
+            TempData["color"] = "danger";
 
-            TempData["error"] = "Email ou senha incorretos!";
             return View(model);
         }
 
@@ -77,12 +77,13 @@ namespace Fiap.Web.FarmaciaEficiente.Controllers
 
             _context.Usuarios.Add(model);
             _context.SaveChanges();
-    
+
             TempData["msg"] = "Usuario cadastrado!";
+            TempData["color"] = "success";
             return RedirectToAction("login");
         }
 
-     
+
 
     }
 }

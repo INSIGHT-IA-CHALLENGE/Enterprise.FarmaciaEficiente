@@ -1,4 +1,4 @@
-﻿@model Fiap.Web.FarmaciaEficiente.Models.Usuario
+﻿@model Usuario
 
 @{
     ViewData["Title"] = "Login";
@@ -19,7 +19,6 @@
     <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
 
     <link href="~/css/style.css" rel="stylesheet">
 
@@ -53,13 +52,9 @@
                             <div class="col-lg-6">
                                 <div class="card-body p-md-5 mx-md-4">
 
-                                    @if (TempData["error"] != null)
-                                    {
-                                        <div class="alert alert-danger">
-                                            @TempData["error"]
-                                        </div>
-                                    }
 
+                                    <alert mensagem="@TempData["msg"]" color="@TempData["color"]"></alert>
+                                   
                                     <form asp-action="login">
 
                                         <partial name="_FormLogin" />
