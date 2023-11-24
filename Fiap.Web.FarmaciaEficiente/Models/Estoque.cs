@@ -14,8 +14,12 @@ namespace Fiap.Web.FarmaciaEficiente.Models
         [Required(ErrorMessage = "Medicamento é obrigatório")]
         public virtual Medicamento Medicamento { get; set; }
 
+        public int MedicamentoId { get; set; }
+
         [Required(ErrorMessage = "Posto é obrigatório")]
         public virtual Posto Posto { get; set; }
+
+        public int PostoId { get; set; }
 
         [Required(ErrorMessage = "Quantidade é obrigatória")]
         public int Quantidade { get; set; } = 0;

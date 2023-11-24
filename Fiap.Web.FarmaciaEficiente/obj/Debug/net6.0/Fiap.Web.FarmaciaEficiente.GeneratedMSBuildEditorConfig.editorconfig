@@ -36,6 +36,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Estoque/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0b3F1ZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Estoque/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0b3F1ZVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Estoque/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0b3F1ZVxfRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,20 +56,52 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Medicamento/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Medicamento/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Medicamento/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9cVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Medicamento/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9cX0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Posto/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdG9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Posto/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdG9cRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Posto/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Posto/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdG9cVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Posto/_Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdG9cX0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Retirada/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV0aXJhZGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Retirada/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV0aXJhZGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Retirada/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV0aXJhZGFcX0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Globa Solution - FINAL/Enterprise.FarmaciaEficiente/Fiap.Web.FarmaciaEficiente/Views/Shared/Error.cshtml]

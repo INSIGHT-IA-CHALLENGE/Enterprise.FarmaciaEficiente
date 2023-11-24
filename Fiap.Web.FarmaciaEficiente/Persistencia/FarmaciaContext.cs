@@ -21,6 +21,27 @@ namespace Fiap.Web.FarmaciaEficiente.Persistencia
                 .WithMany()
                 .HasForeignKey(r => r.UsuarioId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+
+            modelBuilder.Entity<Estoque>()
+               .HasOne(e => e.Medicamento)
+               .WithMany()
+               .HasForeignKey(e => e.MedicamentoId)
+               .IsRequired();
+
+            modelBuilder.Entity<Estoque>()
+                .HasOne(e => e.Posto)
+                .WithMany()
+                .HasForeignKey(e => e.PostoId)
+                .IsRequired();
+
+
+
+
+
         }
+
+
+
     }
 }

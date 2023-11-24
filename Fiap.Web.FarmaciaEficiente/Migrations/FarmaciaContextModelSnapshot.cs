@@ -167,12 +167,14 @@ namespace Fiap.Web.FarmaciaEficiente.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RetiradaId"));
 
-                    b.Property<byte[]>("DataCadastro")
-                        .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TIMESTAMP");
+                    b.Property<DateTime>("DataCadastro")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("Dt_Nascimento");
 
                     b.Property<int>("EstoqueId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.Property<int>("UsuarioId")

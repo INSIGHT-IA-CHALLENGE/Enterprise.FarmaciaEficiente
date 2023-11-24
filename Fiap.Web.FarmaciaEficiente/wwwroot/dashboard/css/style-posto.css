@@ -13,9 +13,34 @@
     }
 
 
+p.done-retirada {
+    color: #155724;
+    padding: 8px;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    border-radius: 8px;
+}
 
-.career-form .form-control::-webkit-input-placeholder {
-    color: #fff;
+.career-div {
+    background-color: #866ec7 !important;
+    border-radius: 5px 5px 0px 0px;
+    padding: 0 16px;
+    color: #fff !important;
+}
+
+
+.career-div-bottom {
+    background-color: #e8e8e8 !important;
+    border-radius: 0px 0px 5px 5px;
+    padding: 0 16px;
+    color: #000000 !important;
+}
+
+
+.box-medicamentos {
+    padding: 0 26px!important;
+    background: #fff!important;
+    border-radius: 12px!important;
 }
 
 .career-form .form-control::-moz-placeholder {
@@ -71,6 +96,19 @@ input#keywords {
     box-shadow: 0 0 35px 0 rgba(130, 130, 130, 0.2);
     border-radius: 10px;
     padding: 10px 35px;
+}
+
+    .filter-result .job-box.disabled {
+        background: #fff;
+        -webkit-box-shadow: 0 0 35px 0 rgba(130, 130, 130, 0.2);
+        box-shadow: 0 0 35px 0 rgba(130, 130, 130, 0.2);
+        border-radius: 10px;
+        padding: 10px 35px;
+    }
+
+
+.job-box:hover {
+    background-color: #ccc;
 }
 
 ul {
@@ -175,4 +213,9 @@ ul {
 
 .mb-30 {
     margin-bottom: 30px;
+}
+
+
+.disabled {
+    background: #bdbdbd;
 }

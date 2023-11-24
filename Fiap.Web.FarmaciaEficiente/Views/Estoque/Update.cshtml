@@ -1,0 +1,26 @@
+﻿@model Fiap.Web.FarmaciaEficiente.ViewModels.AddEstoqueViewModel
+
+@{
+    Layout = "_Dashboard";
+    ViewData["Title"] = "Estoque Update";
+}
+
+
+
+<h1>Atualizar o Medicamento: @Model.Posto.Nome</h1>
+
+<form asp-action="update">
+
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <partial name="_Form" />
+            <input asp-for="EstoqueId" hidden/>
+            <div class="row px-3">
+                <div class="form-outline ml-3  mb-4" id="createAccountButton">
+                    <button type="submit" class="btn btn-primary form-control">Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+

@@ -1,0 +1,32 @@
+﻿@model Fiap.Web.FarmaciaEficiente.ViewModels.AddEstoqueViewModel
+
+
+
+<div class="card-body">
+    <div class="mb-4 row">
+        <h3>Selecione o medicamento a cadastrar no posto: @Model.Posto.Nome</h3>
+
+        <div class="col-12">
+            <div class="mb-4">
+               <label asp-for="MedicamentoId">Selecione o medicamento</label>
+                    <select required asp-for="MedicamentoId" class="form-select">
+                    <option value="">Selecione</option>
+                    @foreach (var medicamento in Model.MedicamentosDisponiveis)
+                    {
+                        <option value="@medicamento.MedicamentoId">@medicamento.Nome</option>
+                    }
+                </select>
+
+
+              
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="form-outline mb-4">
+                <label asp-for="Quantidade" class="form-label">Quantidade</label>
+                <input required asp-for="Quantidade" class="form-control" placeholder="50" />
+            </div>
+        </div>
+    </div>
+</div>

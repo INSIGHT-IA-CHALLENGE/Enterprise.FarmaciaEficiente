@@ -1,0 +1,163 @@
+﻿@model List<Medicamento>
+
+
+@{
+    Layout = "_Dashboard";
+    ViewData["Title"] = "Medicamentos";
+
+    var usuario = ViewData["Usuario"] as Usuario;
+
+}
+
+<head>
+    <link rel="stylesheet" href="~/dashboard/css/style-posto.css">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+</head>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto mb-4">
+            <div class="section-title text-center ">
+                <h3 class="top-c-sep">Postos Cadastrados</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <div class="career-search mb-60">
+
+                <form asp-action="index" method="get" class="career-form mb-60">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-8 my-3">
+                            <div class="input-group position-relative">
+                                <input name="query" type="text" class="form-control" placeholder="Digite sua busca" id="keywords">
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-lg-4 my-3">
+                            <button class="btn btn-lg btn-block btn-light btn-custom" id="contact-submit">
+                                Buscar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+
+                <div class="filter-result">
+                    <div class="d-flex align-items-center justify-content-between ">
+                        <p class="ff-montserrat">Total de resultados : @Model.Count</p>
+
+                        @if (usuario.TipoUsuario == Fiap.Web.FarmaciaEficiente.Models.Enum.TipoUsuarioEnum.ADMIN)
+                        {
+                            <div class="row mt-3 justify-content-end">
+                                <div class="col-12 d-flex justify-content-end">
+                                    <a asp-action="create" class="btn btn-primary px-4 py-2  mb-4 float-end">
+                                        <i class="bi bi-plus"></i> Cadastrar
+                                    </a>
+                                </div>
+                            </div>
+
+                        }
+
+
+                    </div>
+
+                    <alert mensagem="@TempData["msg"]" color="@TempData["color"]"></alert>
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30" style="background-color: @(item.Status == Fiap.Web.FarmaciaEficiente.Models.Enum.StatusEnum.INATIVO ? "#bdbdbd" : "#fff")">
+                            <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
+
+                                <div class="job-content" style="cursor: pointer">
+                                    <h5 class="text-center text-md-left">@item.Nome</h5>
+                                    <ul class="p-0 d-md-flex flex-wrap text-capitalize ff-open-sans flex-column">
+                                        <li class="mr-md-4 text-black">
+                                            <i class="bi bi-card-text mr-2"></i> @item.Descricao
+                                        </li>
+                                        <li class="mr-md-4  text-black">
+                                            <i class="bi bi-tag mr-2"></i> @item.Preco
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            @if (usuario?.TipoUsuario == Fiap.Web.FarmaciaEficiente.Models.Enum.TipoUsuarioEnum.ADMIN)
+                            {
+                                <div class="job-right my-4 flex-shrink-0 d-flex">
+                                    <div class="dropdown mx-1">
+                                        <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="bi bi-gear"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a asp-action="update" asp-route-id="@item.MedicamentoId" class="dropdown-item">Editar</a>
+                                            <a onclick="key.value = @item.MedicamentoId" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                Excluir
+                                            </a>
+                                            <a onclick="postoId.value = @item.MedicamentoId" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#changeStatusModal">
+                                                @(item.Status == Fiap.Web.FarmaciaEficiente.Models.Enum.StatusEnum.ATIVO ? "Desativar" : "Ativar")
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                                            
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmação</h1>
+                <button type="button" data-bs-dismiss="modal" class="btn btn-light">
+                    <i class="bi bi-x-circle"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                Deseja realmente apagar o posto?
+            </div>
+            <div class="modal-footer">
+                <form asp-action="delete">
+                    <input type="hidden" name="id" id="key" />
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                    <button type="submit" class="btn btn-danger">Sim</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="changeStatusModal" tabindex="-1" aria-labelledby="changeStatusModelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="changeStatusModelLabel">Confirmação</h1>
+                <button type="button" data-bs-dismiss="modal" class="btn btn-light">
+                    <i class="bi bi-x-circle"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                Deseja realmente alterar o status do posto?
+            </div>
+            <div class="modal-footer">
+                <form asp-action="changeStatus">
+                    <input type="hidden" name="id" id="postoId" />
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                    <button type="submit" class="btn btn-danger">Sim</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

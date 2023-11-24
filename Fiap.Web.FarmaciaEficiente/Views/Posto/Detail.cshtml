@@ -1,0 +1,120 @@
+﻿@model Fiap.Web.FarmaciaEficiente.ViewModels.PostoViewModel
+
+
+@{
+    Layout = "_Dashboard";
+    ViewData["Title"] = "Posto Detalhe";
+
+    var usuario = ViewData["Usuario"] as Usuario;
+
+}
+
+<head>
+    <link rel="stylesheet" href="~/dashboard/css/style-posto.css">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+</head>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto mb-4">
+            <div class="career-search mb-60">
+                <alert></alert>
+
+
+                <div class="career-div p-3">
+                    <h4 class="top-c-sep text-white">@Model.Nome</h4>
+                </div>
+                <div class="career-div-bottom h-100">
+
+                    <div class="row ">
+
+                        <div class="col-8 align-items-center mx-auto">
+                            <ul class="p-0 d-md-flex mt-3 flex-wrap text-capitalize ff-open-sans">
+                                <li class="mr-md-4 text-black">
+                                    <i class="bi bi-geo-alt-fill"></i> @Model.Endereco.Logradouro, @Model.Endereco.Numero, @Model.Endereco.Cidade, @Model.Endereco.Uf - @Model.Endereco.Cep
+                                </li>
+                                <li class="mr-md-4  text-black">
+                                    <i class="bi bi-capsule mr-2"></i> @Model.QuantidadeMedicamentos
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-4">
+
+                            @if (usuario.TipoUsuario == Fiap.Web.FarmaciaEficiente.Models.Enum.TipoUsuarioEnum.ADMIN)
+                            {
+                                <div class="d-flex mt-3 float-end">
+
+                                    <a asp-action="Create" asp-controller="Estoque" asp-route-PostoId="@Model.PostoId" class="btn btn-primary px-4 py-2 mb-4">
+                                        <i class="bi bi-plus"></i> Cadastrar
+                                    </a>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h6>Descrição: @Model.Descricao</h6>
+                        </div>
+                    </div>
+
+
+
+                    @if (@Model.Medicamentos.Count == 0)
+                    {
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="text-center">
+                                    <p class="">Não há medicamentos</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+
+
+
+                    <div class="py-3 mt-3">
+                        @foreach (var item in Model.Medicamentos)
+                        {
+
+                            <div class="box-medicamentos d-md-flex align-items-center justify-content-between mb-30">
+                                <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
+
+                                    <div class="job-content" style="cursor: pointer">
+                                        <h5 class="text-center text-md-left">@item.Nome</h5>
+                                        <ul class="p-0 d-md-flex flex-wrap text-capitalize ff-open-sans flex-column">
+                                            <li class="mr-md-4">
+                                                Descricao: @item.Descricao
+                                            </li>
+                                            <li class="mr-md-4">
+                                                Quantidade: @item.Quantidade
+                                            </li>
+                                            <li class="mr-md-4" style="color: @(@item.Disponivel ? "#28a745" : "#dc3545");">
+                                                @(@item.Disponivel ? "Disponivel" : "Indisponivel")
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div class="job-right my-4 flex-shrink-0 d-flex">
+                                    <div class="mx-1">
+                                        <a asp-action="create" asp-controller="retirada" asp-route-PostoId="@Model.PostoId" asp-route-MedicamentoId="@item.MedicamentoId" class="btn btn-primary">Pedir retirada</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

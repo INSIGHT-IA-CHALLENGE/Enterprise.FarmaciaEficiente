@@ -1,0 +1,23 @@
+﻿@model Fiap.Web.FarmaciaEficiente.ViewModels.AddEstoqueViewModel
+
+@{
+    Layout = "_Dashboard";
+    ViewData["Title"] = "Medicamento Estoque Cadastro ";
+
+
+}
+
+<form asp-action="create">
+
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <partial name="_Form" />
+            <input asp-for="@Model.Posto.PostoId" hidden />
+            <div class="row px-3">
+                <div class="form-outline ml-3  mb-4" id="createAccountButton">
+                    <button type="submit" class="btn btn-primary form-control">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

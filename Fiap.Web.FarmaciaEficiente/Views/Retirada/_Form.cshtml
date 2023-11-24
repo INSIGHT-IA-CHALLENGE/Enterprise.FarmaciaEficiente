@@ -1,0 +1,42 @@
+﻿@model Fiap.Web.FarmaciaEficiente.ViewModels.RetiradaViewMode
+
+
+
+<div class="card-body">
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-infos" role="tabpanel" aria-labelledby="pills-infos-tab">
+
+
+            <h3>Cadastre sua solicitação</h3>
+
+            <div class="form-outline mb-4">
+                <label asp-for="Posto.Nome">Posto</label>
+                <input asp-for="Posto.Nome" class="form-control" disabled />
+            </div>
+
+
+            <div class="form-outline mb-4">
+                <label asp-for="Nome">Medicamento</label>
+                <input asp-for="Nome" class="form-control" disabled />
+            </div>
+
+            <div class="form-outline mb-4">
+                <label asp-for="Descricao">Descrição</label>
+                <input asp-for="Descricao" class="form-control" disabled />
+            </div>
+
+            <div class="form-outline mb-4">
+                <label hidden asp-for="EstoqueId"></label>
+                <input hidden asp-for="EstoqueId" />
+            </div>
+
+            <div class="form-outline mb-4">
+                <label asp-for="Quantidade">Quantidade</label>
+                <input required min="0" max="@Model.Quantidade" asp-for="Quantidade" class="form-control" placeholder="Sua quantidade" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
